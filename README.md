@@ -49,12 +49,12 @@ No. The motivation behind Chronos is to make the use of the system as simple as 
 ## Can you show me a working example?
 Sure, you can see an example [here](to be created)
 
-## what if I send more gas than required, Can I get back the esccess?
+## what if I send more gas than required, Can I get back the exccess?
 Yes. When the Client send the gas-cost to execute a call, a balance is created for that client contract. Your next call will be deducted from your balance and you will need to provide only the difference between the cost of the call and your current balance.
 
-## what if i just want the my remaning balance back?
-You can have it back!. If you have any reaminings can withdraw it at any time by using the function `clientWithdraw(uint value)`.
-be sure you implement a function in your contract to request your remainings to be send back to your contract.
+## what if i just want the remaning balance back?
+You can have it back!. If you have any reaminings you can withdraw it at any time by using the function `clientWithdraw(uint value)`.
+be sure to implement a function that calls `clientWithdraw(uint value)` in Chromos.
 
 ## What is the address of Chronos?
 You can reach Chronos on:
@@ -62,8 +62,5 @@ You can reach Chronos on:
 * Main Ethereum Network at :
 
 ## Does this service has a cost?
-The client contract (the contract that request the call) must provide the gas-cost necessary to run the callBack function. (See example above). As the calls need to be initiated outside the network, the system also charge a small fee of 1 cent of dollar ($0.01) per call updated with the change of ethereum as listed on [Cryptocompare](https://www.cryptocompare.com/coins/eth/overview/USD)
-
-
-
+The client contract (the contract that request the call) must provide the gas-cost necessary to run the callBack function. (See example above). As the calls need to be initiated outside the network, the system also charge a small fee of 1 cent of dollar ($0.01) per call to mantein the system working. The price is updated with the change of ethereum as listed on [Cryptocompare](https://www.cryptocompare.com/coins/eth/overview/USD)
 
