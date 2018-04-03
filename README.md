@@ -6,8 +6,10 @@ Chronos is a smart contract in the Ethereum network that allows contracts to pro
 **Chronos** allows clients to register a request for being called at a particular block. When the block at which the call was requested arrives, **Chromos** calls a *callBack* function in the client contract. It is that simple.
 
 
+
 ## Is it difficult to interact with Chronos?
 No. The motivation behind Chronos is to make the use of the system as simple as possible. The code below show a template that can be used for any contract that interact with the Chronos system.
+
 
 
 ``` solidity
@@ -46,21 +48,24 @@ No. The motivation behind Chronos is to make the use of the system as simple as 
         }
     }
 ```
+
+
 ## Can you show me a working example?
 Sure, you can see an example [here](to be created)
 
-## what if I send more gas than required, Can I get back the exccess?
-Yes. When the Client send the gas-cost to execute a call, a balance is created for that client contract. Your next call will be deducted from your balance and you will need to provide only the difference between the cost of the call and your current balance.
 
-## what if i just want the remaning balance back?
-You can have it back!. If you have any reaminings you can withdraw it at any time by using the function `clientWithdraw(uint value)`.
-be sure to implement a function that calls `clientWithdraw(uint value)` in Chromos.
+
+## what if I send more gas than required, Can I get back the exccess?
+Yes. When the Client send the gas-cost to execute a call, a balance is created for that client contract. If your call does not consume all the gas-cost that you provided, it is stored in the balance, to be used later on future calls or to be withdraw by your contract using the function `clientWithdraw(uint value)`. 
+
+
 
 ## What is the address of Chronos?
 You can reach Chronos on:
 * Rinkeby test network at:
 * Main Ethereum Network at :
 
+
+
 ## Does this service has a cost?
 The client contract (the contract that request the call) must provide the gas-cost necessary to run the callBack function. (See example above). As the calls need to be initiated outside the network, the system also charge a small fee of 1 cent of dollar ($0.01) per call to mantein the system working. The price is updated with the change of ethereum as listed on [Cryptocompare](https://www.cryptocompare.com/coins/eth/overview/USD)
-
