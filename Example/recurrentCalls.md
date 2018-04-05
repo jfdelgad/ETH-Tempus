@@ -4,6 +4,11 @@ Thsi example shows a code to request recurrent calls from Chronos.
 * Send ether to the contract (Rinkeby). This is necessary as the contract should be able to pay for the gas.
 * Execute `setCallrequest` once. (The contract will continue executing calls untill it runs out of ether)
 
+# Request the non used gas-cost.
+In this contract two more functions are included to request the non used gas from previous call request. Chromos will send the gas back using the functions:
+* **withdrawFromChronos** in the Client contract.
+* **getDepositsFromChronos** in the Clien contract.
+* **clientWithdraw** in Chronos.
 
 ```Solidity
 pragma solidity ^0.4.20; 
