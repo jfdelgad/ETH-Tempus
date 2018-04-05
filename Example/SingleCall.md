@@ -1,4 +1,4 @@
-# Single call to Chronos.
+# Single call request using Chronos.
 This example explains how to create a contract that calls to Chronos and request to be called at a particular block. When the call is receibed a counter is increased.
 
 <br><br><br><br>
@@ -6,7 +6,6 @@ This example explains how to create a contract that calls to Chronos and request
 
 ```Solidity
 pragma solidity ^0.4.20; 
-import "https://github.com/jfdelgad/Chronos/blob/master/Chronos/Chronos.sol"
 
 contract _Chronos {
     function registerCall(address contractAddress, uint256 callOnBlock, uint256 gasAmount) public returns (uint256);
