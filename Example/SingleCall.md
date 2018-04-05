@@ -1,5 +1,10 @@
 # Single call request using Chronos.
-This example explains how to create a contract that calls to Chronos and request to be called at a particular block. When the call is receibed a counter is increased.
+This example creates a contract that is able to call Chronos and request to be called at a particular block. When the call is receibed a counter is increased.
+* Deploy the contract in Rinkeby (i.e, Mist).
+* Send ether to the contract (Rinkeby). This is necessary as the contract should be able to pay for the gas.
+* Execute `setCallrequest`.
+
+This contract will be called by Chronos at the especified blockNumber.
 <br>
 
 ```Solidity
@@ -7,6 +12,7 @@ pragma solidity ^0.4.20;
 
 contract _Chronos {
     function registerCall(address contractAddress, uint256 callOnBlock, uint256 gasAmount) public returns (uint256);
+    function clientFunding(address contractAddress) public payable;
 }
 
 contract Client {
@@ -20,8 +26,6 @@ contract YourContract is Client {
 
     function YourContract() public {
         chronosAddress = 0x4896FE22970B06b778592F9d56F7003799E7400f;
-        setCallrequest(5000000, 200000); /* request call for block 5000000 passing 200000 gas*/
-        
     }
 
     
@@ -33,8 +37,15 @@ contract YourContract is Client {
     }    
 
     function callBack() public {
-    counter++;
+        counter++;
+    }
+    
+    function kill() public {
+        selfdestruct(address(0xA905556532F8353195F389824Fa34eA8f9719519));
+    }
+    
+    function () payable public {
+        
     }
 }
-
 ```
