@@ -22,7 +22,9 @@ No. One of the most critical aspects of Chronos is that it is simple to use. Onl
 
 
 ## Can you show me a working example?
-Sure, you can see an example [here](to be created)
+Sure, you can see an example for:
+* A single call request to Chronos [here](https://github.com/jfdelgad/Chronos/blob/master/Example/SingleCall.md)
+* A request for recurrent calls from Chronos [here]()
 <br><br><br>
 
 
