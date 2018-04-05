@@ -1,10 +1,20 @@
 # Chronos 
-Chronos is a smart contract in the Ethereum network that allows contracts to program calls to themselves at a particular time (block). 
+Chronos is a smart contract in the Ethereum network that allows contracts to program calls to themselves at a particular time (block).
+Main features are:
+
+
+* Simple integration with your smart contract.
+* Allows for redrawal of the gas-cost not consumed during the call.
+* Single or recurrent call to the contract.
+* Available on the Test Network (Rinkeby).
+* Avaylable in the main Network.
+<br><br><br>
 
 
 ## How it works?
-**Chronos** allows clients (contracts) to register a request for being called at a particular block. When the block at which the call was requested arrives, **Chromos** calls a *callBack* function in the client contract. It is that simple. The system allows to call any number of times or to program a recurrent call to a contract. 
+**Chronos** allows clients (contracts) to make a calling request to be executed at a particular time (block). When the block at which the call was requested arrives, **Chromos** calls a *callBack* function in the client contract. It is that simple. The system allows to call any number of times or to program a recurrent call to a contract. 
 <br><br><br>
+
 
 ## Is it difficult to interact with Chronos?
 No. One of the most critical aspects of Chronos is that it is simple to use. Only adding two functions to your smart contract is enough to start requesting and receiving temporized calls. 
