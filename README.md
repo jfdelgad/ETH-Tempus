@@ -33,7 +33,7 @@ Yes. When the Client sends the gas-cost to execute a call, a balance is created 
 <br><br><br>
 
 
-## What is the address of Chronos?
+## Chronos address?
 You can reach Chronos on:
 * Rinkeby test network at: **0x4896FE22970B06b778592F9d56F7003799E7400f**
 * Main Ethereum Network at : (Not Available Yet)
