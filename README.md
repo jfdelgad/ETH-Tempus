@@ -7,7 +7,7 @@ Main features are:
 * Allows for withdrawal of the gas-cost not consumed during the call.
 * Single or recurrent call to the contract.
 * Available on the Test Network (Rinkeby).
-* Avaylable in the main Network.
+* Available in the main Network.
 <br><br><br>
 
 
