@@ -39,10 +39,7 @@ contract YourContract is Client {
     function callBack() public {
         counter++;
     }
-    
-    function kill() public {
-        selfdestruct(address(0xA905556532F8353195F389824Fa34eA8f9719519));
-    }
+   
     
     function () payable public {
         
