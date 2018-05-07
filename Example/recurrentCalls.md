@@ -33,8 +33,10 @@ contract Client {
 contract YourContract is Client {
     address public chronosAddress;
     uint256 public counter;
+    address public admin;
 
-    function YourContract public {
+    function YourContract() public {
+        admin = msg.sender;
         chronosAddress = address(0x4896FE22970B06b778592F9d56F7003799E7400f);
     }
 
@@ -51,7 +53,7 @@ contract YourContract is Client {
     
     function callBack() public {
         // functions to execute upon call
-        counter++
+        counter++;
         // request a new call 10 block from now. Passing 200000 gas
         setCallrequest(block.number + 10, 200000);
     }
@@ -68,7 +70,7 @@ contract YourContract is Client {
     function () public payable {}
 
     function kill() public {
-        selfdestruct(admin);
+        selfdestruct(admin); // keep the network clean, destroy your contract when you do not need it enymore
     }
 
 }
