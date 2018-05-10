@@ -16,7 +16,7 @@ contract YourContract is Client {
 
     function callBack() public {
         counter++;
-        setCallrequest(block.number + 5, 200000, chronosAddress);
+        setCallrequest(block.number + 400, 200000, chronosAddress);
     }
 
     
