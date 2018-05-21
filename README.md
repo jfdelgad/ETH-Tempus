@@ -26,7 +26,7 @@ When the block (time) at which the call was programmd arrives, the front-end app
 
 ## ETH-Tempus address?
 You can reach the service on:
-* Rinkeby test network at: **0x4896FE22970B06b778592F9d56F7003799E7400f**
+* Rinkeby test network at: **0x3e82a82f018a8ebf007c3805f467164dc11f47ac**
 * Main Ethereum Network at : (Soon)
 <br><br><br>
 
