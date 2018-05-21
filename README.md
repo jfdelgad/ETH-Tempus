@@ -38,7 +38,7 @@ This example shows how to request and receive a call every 100 blocks. The contr
 
 ``` solidity
 pragma solidity ^0.4.23; 
-import "./EthTempusClient.sol";
+import "./EthTempusClient.sol"; // use import "./EthTempusClientRinkeby.sol"; for testing on Rinkeby
 
 contract YourContract is Client {
     
