@@ -47,7 +47,7 @@ contract EthTempusClient {
     EthTempus ethTempusInstance;
     
     constructor() public {
-        ethTempusAddress = 0x7c356001cb9e074af31b443e3fd29c348bda71b9;
+        ethTempusAddress = 0x3e82a82f018a8ebf007c3805f467164dc11f47ac;
         ethTempusInstance = EthTempus(ethTempusAddress);
     }
     function setCallrequest(uint256 blockNumber, uint256 maxGasValue, uint256 callId) public {
