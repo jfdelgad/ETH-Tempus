@@ -1,10 +1,11 @@
-# Chronos 
-Chronos is a smart contract in the Ethereum network that allows contracts to program calls to themselves at a particular time (block).
-Main features are:
+# ETH-Tempus.
+ETH-Tempus is a smart contract in the Ethereum network that allows other contracts to program calls to themselves at a particular time (block).
+
+The  main Features of ETH-Tempus are:
 
 
 * Simple integration with your smart contract.
-* Allows for withdrawal of the gas-cost not consumed during the call.
+* No need to pay up front for the service. 
 * Single or recurrent call to the contract.
 * Available on the Test Network (Rinkeby).
 * Available in the main Network.
@@ -12,35 +13,20 @@ Main features are:
 
 
 ## How it works?
-**Chronos** allows clients (contracts) to make a calling request to be executed at a particular time (block). When the block at which the call was requested arrives, **Chromos** calls a *callBack* function in the client contract. It is that simple. The system allows to call any number of times or to program a recurrent call to a contract. 
+**ETH-Tempus** allows clients (contracts) to schedule execution of functions at a particular time (block). When the block at which the call was requested arrives, **ETH-Tempus** calls a *callBack* function in the client contract. It is that simple. The system allows to call any number of times or to program a recurrent call to a contract. 
 <br><br><br>
 
 
-## Is it difficult to interact with Chronos?
-No. One of the most critical aspects of Chronos is that it is simple to use. Only adding two functions to your smart contract is enough to start requesting and receiving temporized calls. 
-<br><br><br>
+## how much cost to schedule a call?
+In order to schedule a call, your contract should call the function `requestCall` from ETH-Tempus contract. This has no cost. The average gas used by a contract to schedule a call is about 25K gas. 
+
+When the block (time) at which the call was programmd arrives, the front-end application of ETH-Tempus call the target contract. After this, the contract calculate the gas used and request the payment of the gas plus a fee. This fee is 5 cents of dollar (0.05 USD). The overhead of gas used to execute the transaction is low, in average 40K gas. Making the scheduling execution higly efficient.
 
 
-## Can you show me a working example?
-Sure, you can see an example for:
-* A single call request to Chronos [here](https://github.com/jfdelgad/Chronos/blob/master/Example/SingleCall.md)
-* A request for recurrent calls from Chronos [here](https://github.com/jfdelgad/Chronos/blob/master/Example/recurrentCalls.md)
-<br><br><br>
-
-
-## What if I send more gas than required, Can I get back the excess?
-Yes. When the Client sends the gas-cost to execute a call, a balance is created for that client-contract. If your request does not consume all the gas-cost that you provided, it is stored in the balance. Chronos provides a function to send the gas-cost in your balance back to the contract that initially made the transaction. 
-<br><br><br>
-
-
-## Chronos address?
-You can reach Chronos on:
+## ETH-Tempus address?
+You can reach the service on:
 * Rinkeby test network at: **0x4896FE22970B06b778592F9d56F7003799E7400f**
 * Main Ethereum Network at : (Not Available Yet)
 <br><br><br>
 
 
-
-## Does this service has a cost?
-The client contract (the contract that requests the call) must provide the gas-cost necessary to run the callBack function. (See example above). As the calls need to be initiated outside the network, the system also charges a small fee of  1 cent of a dollar (~0.01 USD) per request to maintain the system working. The price is updated with the change of ethereum as listed on [Cryptocompare](https://www.cryptocompare.com/coins/eth/overview/USD)
-<br><br><br>
