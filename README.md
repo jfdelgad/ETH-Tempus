@@ -17,7 +17,7 @@ The  main Features of ETH-Tempus are:
 <br><br><br>
 
 
-## How much cost to schedule a call?
+## How much cost scheduling a call?
 In order to schedule a call, your contract should call the function `requestCall` in ETH-Tempus contract. This has no cost. The average gas used to schedule a call is about 25K gas. 
 
 When the block (time) at which the call was programmd arrives, the front-end application of ETH-Tempus call the target contract. After this, the contract calculate the gas used and request the payment of the gas plus a fee. This fee is 5 cents of dollar (0.05 USD). The overhead of gas used to execute the transaction is low, in average 40K gas. This make the scheduling execution higly efficient.
