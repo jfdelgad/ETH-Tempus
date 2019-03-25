@@ -1,3 +1,7 @@
+# UPDATE:
+
+This projects has been updated and is now called Aion Scheduling System, which offers ether, token, and in general scheduling of arbitrary bytecode transactions. Aion is available on Ropsten and the MaiNet, run by [ETH-Pantheon](https://aion.ethpantheon.com/). See description and code here: https://github.com/ETH-Pantheon/Aion. All the code is available, and now I am working on an upgrade that allows anyone to become an executor of calls in Aion, making the system more decentralized.
+
 # ETH-Tempus.
 ETH-Tempus is a smart contract in the Ethereum network that allows other contracts to program calls to themselves at a particular time (block).
 
